@@ -13,7 +13,8 @@
 <form action="newproduct" method="post">
 
 
-	productName <input type="text" name="productName"> <br><br>
+	productName <input type="text" name="productName" value="${productname}">
+	 <span style="color:red">${nameError}</span> <br><br>
 	price <input type="text" name="price"> <br><br>
 	qty <input type="text" name = "qty"> <br><br>
 	category <input type="text" name="category"><br><br>

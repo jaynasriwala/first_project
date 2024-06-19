@@ -4,8 +4,8 @@ public class EProductBean
 {
 	private Integer productId;
 	private String productName;
-	private float price;
-	private int qty;
+	private Float price;
+	private Integer qty;
 	private String category;
 	public Integer getProductId() {
 		return productId;
@@ -19,16 +19,18 @@ public class EProductBean
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
-	public float getPrice() {
+
+
+	public Float getPrice() {
 		return price;
 	}
-	public void setPrice(float price) {
+	public void setPrice(Float price) {
 		this.price = price;
 	}
-	public int getQty() {
+	public Integer getQty() {
 		return qty;
 	}
-	public void setQty(int qty) {
+	public void setQty(Integer qty) {
 		this.qty = qty;
 	}
 	public String getCategory() {
