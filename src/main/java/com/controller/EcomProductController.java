@@ -80,6 +80,21 @@ public class EcomProductController
 		return "redirect:/product";
 	}
 	
+	@GetMapping("/deletebyname")
+	public String deleteByName()
+	{
+		
+		return "DeleteByName";
+	}
+	
+	@PostMapping("/deletebyname")
+	public String deleteByName(EProductBean productbean)
+	{
+		
+		productDao.deleteProduct(productbean.getProductName());
+		return "redirect:/product";
+		
+	}
 	
 	
 }

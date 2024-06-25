@@ -33,4 +33,10 @@ public class EProductDao
 	{
 		stmt.update("delete from products where productId = ? ",id);
 	}
+
+	public void deleteProduct(String id)
+	{
+		stmt.update("delete from products where productName = ? ",id);
+	}
 }
+
