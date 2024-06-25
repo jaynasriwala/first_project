@@ -1,3 +1,5 @@
+<%@page import="com.bean.EProductBean"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -17,11 +19,12 @@
 		<tr>
 			<th>ProductId</th>
 			<th>ProductName</th>
+			<th>Action</th>
 		</tr>
 		<%
 		for (EProductBean p : products) {
 			out.print("<tr>");
-			out.print("<td>" + p.getProductId() + "</td><td>" + p.getProductName() + "</td>");
+			out.print("<td>" + p.getProductId() + "</td><td>" + p.getProductName() + "</td><td><a href='deleteProduct?productId="+p.getProductId()+"'>Delete</a></td>");
 			out.print("</tr>");
 		}
 		%>

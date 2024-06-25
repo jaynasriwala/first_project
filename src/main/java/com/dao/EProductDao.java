@@ -28,4 +28,9 @@ public class EProductDao
 		
 		return list;
 	}
+	
+	public void deleteProduct(Integer id)
+	{
+		stmt.update("delete from products where productId = ? ",id);
+	}
 }

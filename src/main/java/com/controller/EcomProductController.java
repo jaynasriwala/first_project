@@ -56,7 +56,7 @@ public class EcomProductController
 		else 
 		{	
 			productDao.addProduct(productbean);
-			return "welcome";
+			return "redirect:/product";
 			
 		}
 	}
@@ -72,6 +72,14 @@ public class EcomProductController
 		return "EProductlist";
 	
 	}
+	
+	@GetMapping("/deleteproduct")
+	public String deleteProduct(@RequestParam("productId") Integer productId) {
+		
+		productDao.deleteProduct(productId);
+		return "redirect:/product";
+	}
+	
 	
 	
 }
