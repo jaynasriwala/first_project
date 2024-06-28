@@ -96,5 +96,16 @@ public class EcomProductController
 		
 	}
 	
+	@GetMapping("/viewproduct")
+	public String viewProduuct(@RequestParam ("productId") Integer productId,Model model) {
+		
+		EProductBean bean = productDao.getProductById(productId);
+		
+		model.addAttribute("productbean",bean);
+		
+		return "ViewProduct";
+	}
+	
+	
 	
 }
