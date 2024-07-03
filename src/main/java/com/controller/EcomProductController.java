@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.bean.EProductBean;
 import com.dao.EProductDao;
+import com.service.FileUplodeService;
+
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 
 
@@ -24,13 +27,16 @@ public class EcomProductController
 	@Autowired
 	EProductDao productDao; 
 	
+	@Autowired
+	FileUplodeService service;
+	
 	@GetMapping("/newproduct")
 	public String newProduct() {
 		return "NewProduct";
 	}
 	
 	@PostMapping("/newproduct")
-	public String postMethodName(EProductBean productbean , Model model) {
+	public String postMethodName(EProductBean productbean , Model model, @RequestParam("masterImage") MultipartFile masterImage) {
 	
 		
 		
@@ -55,6 +61,8 @@ public class EcomProductController
 		}
 		else 
 		{	
+			service.fileUplodeService(masterImage);
+			
 			productDao.addProduct(productbean);
 			return "redirect:/product";
 			

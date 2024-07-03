@@ -10,7 +10,7 @@
 <h2>add new product</h2>
 
 
-<form action="newproduct" method="post">
+<form action="newproduct" method="post" enctype="multipart/form-data">
 
 
 	productName <input type="text" name="productName" value="${productname}">
@@ -18,6 +18,10 @@
 	price <input type="text" name="price"> <br><br>
 	qty <input type="text" name = "qty"> <br><br>
 	category <input type="text" name="category"><br><br>
+	
+	MasterImage : <input type="file" name="masterImage"/><br><BR> 
+		
+	
 	
 	<input type="submit" value="add new product"> 
 </form>
