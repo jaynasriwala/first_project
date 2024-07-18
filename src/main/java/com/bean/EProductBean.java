@@ -7,6 +7,14 @@ public class EProductBean
 	private Float price;
 	private Integer qty;
 	private String category;
+	private String productImagePath;
+	
+	public String getProductImagePath() {
+		return productImagePath;
+	}
+	public void setProductImagePath(String productImagePath) {
+		this.productImagePath = productImagePath;
+	}
 	public Integer getProductId() {
 		return productId;
 	}

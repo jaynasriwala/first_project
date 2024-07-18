@@ -18,7 +18,7 @@ public class EProductDao
 	
 	public void addProduct(EProductBean productbean)
 	{
-		stmt.update("insert into products(productName,price,qty,category) value(?,?,?,?)",productbean.getProductName(),productbean.getPrice(),productbean.getQty(),productbean.getCategory());
+		stmt.update("insert into products(productName,price,qty,category,productImagePath) value(?,?,?,?,?)",productbean.getProductName(),productbean.getPrice(),productbean.getQty(),productbean.getCategory(),productbean.getProductImagePath());
 		
 	}
 	

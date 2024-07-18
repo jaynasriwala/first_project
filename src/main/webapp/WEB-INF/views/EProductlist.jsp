@@ -14,6 +14,9 @@
 
 <a href="newproduct">Add New Product</a>
 <br><br>
+
+<a href="ehome">Home</a><br><br>
+
 <a href="deletebyname">delete by name</a>
 
 	<%

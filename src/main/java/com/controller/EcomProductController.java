@@ -62,6 +62,7 @@ public class EcomProductController
 		else 
 		{	
 			service.fileUplodeService(masterImage);
+			productbean.setProductImagePath("images//products//"+ masterImage.getOriginalFilename());
 			
 			productDao.addProduct(productbean);
 			return "redirect:/product";
@@ -77,7 +78,7 @@ public class EcomProductController
 		model.addAttribute("products",products);
 		
 		
-		return "EProductlist";
+		return "EcomUserProducts";
 	
 	}
 	
